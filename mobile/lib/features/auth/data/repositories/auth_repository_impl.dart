@@ -1,4 +1,5 @@
 import 'package:quran_memorizer/features/auth/data/datasources/auth_remote_datasource.dart';
+import 'package:quran_memorizer/features/auth/data/models/auth_models.dart';
 import 'package:quran_memorizer/features/auth/domain/entities/auth_entities.dart';
 import 'package:quran_memorizer/features/auth/domain/repositories/auth_repository.dart';
 

@@ -24,13 +24,13 @@ dependencies:
   sqflite: ^2.3.0
   path: ^1.8.3
 
-  # AI/ML
-  tflite_flutter: ^0.9.0
-  tflite_flutter_helper: ^0.2.1
+  # AI/ML (temporarily disabled due to compatibility issues)
+  # tflite_flutter: ^0.9.0
+  # tflite_flutter_helper: ^0.2.1
 
   # Audio
   audioplayers: ^5.2.1
-  record: ^5.0.4
+  # record: ^5.0.4  # Temporarily disabled due to compatibility issues
   path_provider: ^2.1.1
 
   # UI
@@ -43,9 +43,13 @@ dependencies:
   shared_preferences: ^2.2.2
   connectivity_plus: ^5.0.2
   permission_handler: ^11.0.1
-  intl: ^0.18.1
+  intl: ^0.20.2
   get_it: ^7.6.4
   go_router: ^12.1.1
+
+  # Localization
+  flutter_localizations:
+    sdk: flutter
 
 dev_dependencies:
   flutter_test:
@@ -54,16 +58,17 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  generate: true
 
-  assets:
-    - assets/images/
-    - assets/audio/
-    - assets/models/
-    - assets/fonts/
+  # assets:
+  #   - assets/images/
+  #   - assets/audio/
+  #   - assets/models/
+  #   - assets/fonts/
 
-  fonts:
-    - family: Arabic
-      fonts:
-        - asset: assets/fonts/NotoNaskhArabic-Regular.ttf
-        - asset: assets/fonts/NotoNaskhArabic-Bold.ttf
-          weight: 700
+  # fonts:
+  #   - family: Arabic
+  #     fonts:
+  #       - asset: assets/fonts/NotoNaskhArabic-Regular.ttf
+  #       - asset: assets/fonts/NotoNaskhArabic-Bold.ttf
+  #         weight: 700

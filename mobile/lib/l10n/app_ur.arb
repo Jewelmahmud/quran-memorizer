@@ -1,0 +1,223 @@
+{
+  "@@locale": "ur",
+  "appTitle": "قرآن یادداشت کرنے والا",
+  "@appTitle": {
+    "description": "The title of the application"
+  },
+  "welcome": "قرآن یادداشت کرنے والے میں خوش آمدید",
+  "@welcome": {
+    "description": "Welcome message"
+  },
+  "login": "لاگ ان",
+  "@login": {
+    "description": "Login button text"
+  },
+  "register": "رجسٹر",
+  "@register": {
+    "description": "Register button text"
+  },
+  "email": "ای میل",
+  "@email": {
+    "description": "Email field label"
+  },
+  "password": "پاس ورڈ",
+  "@password": {
+    "description": "Password field label"
+  },
+  "confirmPassword": "پاس ورڈ کی تصدیق",
+  "@confirmPassword": {
+    "description": "Confirm password field label"
+  },
+  "forgotPassword": "پاس ورڈ بھول گئے؟",
+  "@forgotPassword": {
+    "description": "Forgot password link text"
+  },
+  "dontHaveAccount": "کوئی اکاؤنٹ نہیں ہے؟",
+  "@dontHaveAccount": {
+    "description": "Text for users who don't have an account"
+  },
+  "alreadyHaveAccount": "پہلے سے اکاؤنٹ ہے؟",
+  "@alreadyHaveAccount": {
+    "description": "Text for users who already have an account"
+  },
+  "signUp": "سائن اپ",
+  "@signUp": {
+    "description": "Sign up button text"
+  },
+  "signIn": "سائن ان",
+  "@signIn": {
+    "description": "Sign in button text"
+  },
+  "home": "ہوم",
+  "@home": {
+    "description": "Home tab label"
+  },
+  "learning": "سیکھنا",
+  "@learning": {
+    "description": "Learning tab label"
+  },
+  "progress": "ترقی",
+  "@progress": {
+    "description": "Progress tab label"
+  },
+  "settings": "سیٹنگز",
+  "@settings": {
+    "description": "Settings tab label"
+  },
+  "dailyProgress": "روزانہ ترقی",
+  "@dailyProgress": {
+    "description": "Daily progress section title"
+  },
+  "streak": "سلسلہ",
+  "@streak": {
+    "description": "Streak counter label"
+  },
+  "versesMemorized": "یاد کیے گئے آیات",
+  "@versesMemorized": {
+    "description": "Verses memorized counter label"
+  },
+  "startLearning": "سیکھنا شروع کریں",
+  "@startLearning": {
+    "description": "Start learning button text"
+  },
+  "continueLearning": "سیکھنا جاری رکھیں",
+  "@continueLearning": {
+    "description": "Continue learning button text"
+  },
+  "reviewQueue": "جائزہ کی قطار",
+  "@reviewQueue": {
+    "description": "Review queue section title"
+  },
+  "quickActions": "فوری اعمال",
+  "@quickActions": {
+    "description": "Quick actions section title"
+  },
+  "recentProgress": "حالیہ ترقی",
+  "@recentProgress": {
+    "description": "Recent progress section title"
+  },
+  "selectSurah": "سورہ منتخب کریں",
+  "@selectSurah": {
+    "description": "Select surah button text"
+  },
+  "selectReciter": "قاری منتخب کریں",
+  "@selectReciter": {
+    "description": "Select reciter button text"
+  },
+  "playAudio": "آڈیو چلائیں",
+  "@playAudio": {
+    "description": "Play audio button text"
+  },
+  "recordRecitation": "تلاوت ریکارڈ کریں",
+  "@recordRecitation": {
+    "description": "Record recitation button text"
+  },
+  "stopRecording": "ریکارڈنگ بند کریں",
+  "@stopRecording": {
+    "description": "Stop recording button text"
+  },
+  "submitRecitation": "تلاوت جمع کریں",
+  "@submitRecitation": {
+    "description": "Submit recitation button text"
+  },
+  "language": "زبان",
+  "@language": {
+    "description": "Language setting label"
+  },
+  "theme": "تھیم",
+  "@theme": {
+    "description": "Theme setting label"
+  },
+  "notifications": "اطلاعات",
+  "@notifications": {
+    "description": "Notifications setting label"
+  },
+  "logout": "لاگ آؤٹ",
+  "@logout": {
+    "description": "Logout button text"
+  },
+  "error": "خرابی",
+  "@error": {
+    "description": "Error message prefix"
+  },
+  "success": "کامیابی",
+  "@success": {
+    "description": "Success message prefix"
+  },
+  "loading": "لوڈ ہو رہا ہے...",
+  "@loading": {
+    "description": "Loading message"
+  },
+  "retry": "دوبارہ کوشش کریں",
+  "@retry": {
+    "description": "Retry button text"
+  },
+  "cancel": "منسوخ",
+  "@cancel": {
+    "description": "Cancel button text"
+  },
+  "save": "محفوظ کریں",
+  "@save": {
+    "description": "Save button text"
+  },
+  "delete": "حذف کریں",
+  "@delete": {
+    "description": "Delete button text"
+  },
+  "edit": "ترمیم",
+  "@edit": {
+    "description": "Edit button text"
+  },
+  "back": "واپس",
+  "@back": {
+    "description": "Back button text"
+  },
+  "next": "اگلا",
+  "@next": {
+    "description": "Next button text"
+  },
+  "previous": "پچھلا",
+  "@previous": {
+    "description": "Previous button text"
+  },
+  "done": "ہو گیا",
+  "@done": {
+    "description": "Done button text"
+  },
+  "skip": "چھوڑیں",
+  "@skip": {
+    "description": "Skip button text"
+  },
+  "share": "شیئر کریں",
+  "@share": {
+    "description": "Share button text"
+  },
+  "bookmark": "بک مارک",
+  "@bookmark": {
+    "description": "Bookmark button text"
+  },
+  "removeBookmark": "بک مارک ہٹائیں",
+  "@removeBookmark": {
+    "description": "Remove bookmark button text"
+  },
+  "translation": "ترجمہ",
+  "@translation": {
+    "description": "Translation toggle text"
+  },
+  "tajweed": "تجوید",
+  "@tajweed": {
+    "description": "Tajweed toggle text"
+  },
+  "audio": "آڈیو",
+  "@audio": {
+    "description": "Audio toggle text"
+  },
+  "offlineMode": "آف لائن موڈ",
+  "@offlineMode": {
+    "description": "Offline mode indicator"
+  },
+  "onlineMode": "آن لائن موڈ",
+  "@onlineMode": {
+    "description": "Online mode indicator"
+  }
+}

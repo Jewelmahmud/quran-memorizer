@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:quran_memorizer/features/auth/presentation/bloc/auth_bloc.dart';
 import 'package:quran_memorizer/features/auth/presentation/widgets/auth_form.dart';
+import 'package:quran_memorizer/l10n/app_localizations.dart';
 import 'package:quran_memorizer/core/routing/app_router.dart';
 import 'package:go_router/go_router.dart';
 
@@ -12,7 +13,7 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Login'),
+        title: Text(AppLocalizations.of(context)!.login),
       ),
       body: BlocListener<AuthBloc, AuthState>(
         listener: (context, state) {

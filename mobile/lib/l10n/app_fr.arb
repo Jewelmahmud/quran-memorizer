@@ -1,0 +1,223 @@
+{
+  "@@locale": "fr",
+  "appTitle": "Mémoriseur de Coran",
+  "@appTitle": {
+    "description": "The title of the application"
+  },
+  "welcome": "Bienvenue dans le Mémoriseur de Coran",
+  "@welcome": {
+    "description": "Welcome message"
+  },
+  "login": "Connexion",
+  "@login": {
+    "description": "Login button text"
+  },
+  "register": "S'inscrire",
+  "@register": {
+    "description": "Register button text"
+  },
+  "email": "E-mail",
+  "@email": {
+    "description": "Email field label"
+  },
+  "password": "Mot de passe",
+  "@password": {
+    "description": "Password field label"
+  },
+  "confirmPassword": "Confirmer le mot de passe",
+  "@confirmPassword": {
+    "description": "Confirm password field label"
+  },
+  "forgotPassword": "Mot de passe oublié ?",
+  "@forgotPassword": {
+    "description": "Forgot password link text"
+  },
+  "dontHaveAccount": "Vous n'avez pas de compte ?",
+  "@dontHaveAccount": {
+    "description": "Text for users who don't have an account"
+  },
+  "alreadyHaveAccount": "Vous avez déjà un compte ?",
+  "@alreadyHaveAccount": {
+    "description": "Text for users who already have an account"
+  },
+  "signUp": "S'inscrire",
+  "@signUp": {
+    "description": "Sign up button text"
+  },
+  "signIn": "Se connecter",
+  "@signIn": {
+    "description": "Sign in button text"
+  },
+  "home": "Accueil",
+  "@home": {
+    "description": "Home tab label"
+  },
+  "learning": "Apprentissage",
+  "@learning": {
+    "description": "Learning tab label"
+  },
+  "progress": "Progrès",
+  "@progress": {
+    "description": "Progress tab label"
+  },
+  "settings": "Paramètres",
+  "@settings": {
+    "description": "Settings tab label"
+  },
+  "dailyProgress": "Progrès quotidien",
+  "@dailyProgress": {
+    "description": "Daily progress section title"
+  },
+  "streak": "Série",
+  "@streak": {
+    "description": "Streak counter label"
+  },
+  "versesMemorized": "Versets mémorisés",
+  "@versesMemorized": {
+    "description": "Verses memorized counter label"
+  },
+  "startLearning": "Commencer l'apprentissage",
+  "@startLearning": {
+    "description": "Start learning button text"
+  },
+  "continueLearning": "Continuer l'apprentissage",
+  "@continueLearning": {
+    "description": "Continue learning button text"
+  },
+  "reviewQueue": "File de révision",
+  "@reviewQueue": {
+    "description": "Review queue section title"
+  },
+  "quickActions": "Actions rapides",
+  "@quickActions": {
+    "description": "Quick actions section title"
+  },
+  "recentProgress": "Progrès récent",
+  "@recentProgress": {
+    "description": "Recent progress section title"
+  },
+  "selectSurah": "Sélectionner une sourate",
+  "@selectSurah": {
+    "description": "Select surah button text"
+  },
+  "selectReciter": "Sélectionner un récitateur",
+  "@selectReciter": {
+    "description": "Select reciter button text"
+  },
+  "playAudio": "Lire l'audio",
+  "@playAudio": {
+    "description": "Play audio button text"
+  },
+  "recordRecitation": "Enregistrer la récitation",
+  "@recordRecitation": {
+    "description": "Record recitation button text"
+  },
+  "stopRecording": "Arrêter l'enregistrement",
+  "@stopRecording": {
+    "description": "Stop recording button text"
+  },
+  "submitRecitation": "Soumettre la récitation",
+  "@submitRecitation": {
+    "description": "Submit recitation button text"
+  },
+  "language": "Langue",
+  "@language": {
+    "description": "Language setting label"
+  },
+  "theme": "Thème",
+  "@theme": {
+    "description": "Theme setting label"
+  },
+  "notifications": "Notifications",
+  "@notifications": {
+    "description": "Notifications setting label"
+  },
+  "logout": "Déconnexion",
+  "@logout": {
+    "description": "Logout button text"
+  },
+  "error": "Erreur",
+  "@error": {
+    "description": "Error message prefix"
+  },
+  "success": "Succès",
+  "@success": {
+    "description": "Success message prefix"
+  },
+  "loading": "Chargement...",
+  "@loading": {
+    "description": "Loading message"
+  },
+  "retry": "Réessayer",
+  "@retry": {
+    "description": "Retry button text"
+  },
+  "cancel": "Annuler",
+  "@cancel": {
+    "description": "Cancel button text"
+  },
+  "save": "Enregistrer",
+  "@save": {
+    "description": "Save button text"
+  },
+  "delete": "Supprimer",
+  "@delete": {
+    "description": "Delete button text"
+  },
+  "edit": "Modifier",
+  "@edit": {
+    "description": "Edit button text"
+  },
+  "back": "Retour",
+  "@back": {
+    "description": "Back button text"
+  },
+  "next": "Suivant",
+  "@next": {
+    "description": "Next button text"
+  },
+  "previous": "Précédent",
+  "@previous": {
+    "description": "Previous button text"
+  },
+  "done": "Terminé",
+  "@done": {
+    "description": "Done button text"
+  },
+  "skip": "Passer",
+  "@skip": {
+    "description": "Skip button text"
+  },
+  "share": "Partager",
+  "@share": {
+    "description": "Share button text"
+  },
+  "bookmark": "Signet",
+  "@bookmark": {
+    "description": "Bookmark button text"
+  },
+  "removeBookmark": "Supprimer le signet",
+  "@removeBookmark": {
+    "description": "Remove bookmark button text"
+  },
+  "translation": "Traduction",
+  "@translation": {
+    "description": "Translation toggle text"
+  },
+  "tajweed": "Tajweed",
+  "@tajweed": {
+    "description": "Tajweed toggle text"
+  },
+  "audio": "Audio",
+  "@audio": {
+    "description": "Audio toggle text"
+  },
+  "offlineMode": "Mode hors ligne",
+  "@offlineMode": {
+    "description": "Offline mode indicator"
+  },
+  "onlineMode": "Mode en ligne",
+  "@onlineMode": {
+    "description": "Online mode indicator"
+  }
+}

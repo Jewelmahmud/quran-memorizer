@@ -1,0 +1,223 @@
+{
+  "@@locale": "en",
+  "appTitle": "Quran Memorizer",
+  "@appTitle": {
+    "description": "The title of the application"
+  },
+  "welcome": "Welcome to Quran Memorizer",
+  "@welcome": {
+    "description": "Welcome message"
+  },
+  "login": "Login",
+  "@login": {
+    "description": "Login button text"
+  },
+  "register": "Register",
+  "@register": {
+    "description": "Register button text"
+  },
+  "email": "Email",
+  "@email": {
+    "description": "Email field label"
+  },
+  "password": "Password",
+  "@password": {
+    "description": "Password field label"
+  },
+  "confirmPassword": "Confirm Password",
+  "@confirmPassword": {
+    "description": "Confirm password field label"
+  },
+  "forgotPassword": "Forgot Password?",
+  "@forgotPassword": {
+    "description": "Forgot password link text"
+  },
+  "dontHaveAccount": "Don't have an account?",
+  "@dontHaveAccount": {
+    "description": "Text for users who don't have an account"
+  },
+  "alreadyHaveAccount": "Already have an account?",
+  "@alreadyHaveAccount": {
+    "description": "Text for users who already have an account"
+  },
+  "signUp": "Sign Up",
+  "@signUp": {
+    "description": "Sign up button text"
+  },
+  "signIn": "Sign In",
+  "@signIn": {
+    "description": "Sign in button text"
+  },
+  "home": "Home",
+  "@home": {
+    "description": "Home tab label"
+  },
+  "learning": "Learning",
+  "@learning": {
+    "description": "Learning tab label"
+  },
+  "progress": "Progress",
+  "@progress": {
+    "description": "Progress tab label"
+  },
+  "settings": "Settings",
+  "@settings": {
+    "description": "Settings tab label"
+  },
+  "dailyProgress": "Daily Progress",
+  "@dailyProgress": {
+    "description": "Daily progress section title"
+  },
+  "streak": "Streak",
+  "@streak": {
+    "description": "Streak counter label"
+  },
+  "versesMemorized": "Verses Memorized",
+  "@versesMemorized": {
+    "description": "Verses memorized counter label"
+  },
+  "startLearning": "Start Learning",
+  "@startLearning": {
+    "description": "Start learning button text"
+  },
+  "continueLearning": "Continue Learning",
+  "@continueLearning": {
+    "description": "Continue learning button text"
+  },
+  "reviewQueue": "Review Queue",
+  "@reviewQueue": {
+    "description": "Review queue section title"
+  },
+  "quickActions": "Quick Actions",
+  "@quickActions": {
+    "description": "Quick actions section title"
+  },
+  "recentProgress": "Recent Progress",
+  "@recentProgress": {
+    "description": "Recent progress section title"
+  },
+  "selectSurah": "Select Surah",
+  "@selectSurah": {
+    "description": "Select surah button text"
+  },
+  "selectReciter": "Select Reciter",
+  "@selectReciter": {
+    "description": "Select reciter button text"
+  },
+  "playAudio": "Play Audio",
+  "@playAudio": {
+    "description": "Play audio button text"
+  },
+  "recordRecitation": "Record Recitation",
+  "@recordRecitation": {
+    "description": "Record recitation button text"
+  },
+  "stopRecording": "Stop Recording",
+  "@stopRecording": {
+    "description": "Stop recording button text"
+  },
+  "submitRecitation": "Submit Recitation",
+  "@submitRecitation": {
+    "description": "Submit recitation button text"
+  },
+  "language": "Language",
+  "@language": {
+    "description": "Language setting label"
+  },
+  "theme": "Theme",
+  "@theme": {
+    "description": "Theme setting label"
+  },
+  "notifications": "Notifications",
+  "@notifications": {
+    "description": "Notifications setting label"
+  },
+  "logout": "Logout",
+  "@logout": {
+    "description": "Logout button text"
+  },
+  "error": "Error",
+  "@error": {
+    "description": "Error message prefix"
+  },
+  "success": "Success",
+  "@success": {
+    "description": "Success message prefix"
+  },
+  "loading": "Loading...",
+  "@loading": {
+    "description": "Loading message"
+  },
+  "retry": "Retry",
+  "@retry": {
+    "description": "Retry button text"
+  },
+  "cancel": "Cancel",
+  "@cancel": {
+    "description": "Cancel button text"
+  },
+  "save": "Save",
+  "@save": {
+    "description": "Save button text"
+  },
+  "delete": "Delete",
+  "@delete": {
+    "description": "Delete button text"
+  },
+  "edit": "Edit",
+  "@edit": {
+    "description": "Edit button text"
+  },
+  "back": "Back",
+  "@back": {
+    "description": "Back button text"
+  },
+  "next": "Next",
+  "@next": {
+    "description": "Next button text"
+  },
+  "previous": "Previous",
+  "@previous": {
+    "description": "Previous button text"
+  },
+  "done": "Done",
+  "@done": {
+    "description": "Done button text"
+  },
+  "skip": "Skip",
+  "@skip": {
+    "description": "Skip button text"
+  },
+  "share": "Share",
+  "@share": {
+    "description": "Share button text"
+  },
+  "bookmark": "Bookmark",
+  "@bookmark": {
+    "description": "Bookmark button text"
+  },
+  "removeBookmark": "Remove Bookmark",
+  "@removeBookmark": {
+    "description": "Remove bookmark button text"
+  },
+  "translation": "Translation",
+  "@translation": {
+    "description": "Translation toggle text"
+  },
+  "tajweed": "Tajweed",
+  "@tajweed": {
+    "description": "Tajweed toggle text"
+  },
+  "audio": "Audio",
+  "@audio": {
+    "description": "Audio toggle text"
+  },
+  "offlineMode": "Offline Mode",
+  "@offlineMode": {
+    "description": "Offline mode indicator"
+  },
+  "onlineMode": "Online Mode",
+  "@onlineMode": {
+    "description": "Online mode indicator"
+  }
+}

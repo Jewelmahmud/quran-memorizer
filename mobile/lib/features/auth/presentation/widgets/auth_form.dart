@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:quran_memorizer/features/auth/presentation/bloc/auth_bloc.dart';
+import 'package:quran_memorizer/l10n/app_localizations.dart';
 
 class AuthForm extends StatefulWidget {
   final bool isLogin;
@@ -62,7 +63,9 @@ class _AuthFormState extends State<AuthForm> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Text(
-                widget.isLogin ? 'Login' : 'Register',
+                widget.isLogin
+                    ? AppLocalizations.of(context)!.login
+                    : AppLocalizations.of(context)!.register,
                 style: Theme.of(context).textTheme.headlineMedium,
                 textAlign: TextAlign.center,
               ),
@@ -85,9 +88,9 @@ class _AuthFormState extends State<AuthForm> {
               ],
               TextFormField(
                 controller: _emailController,
-                decoration: const InputDecoration(
-                  labelText: 'Email',
-                  prefixIcon: Icon(Icons.email),
+                decoration: InputDecoration(
+                  labelText: AppLocalizations.of(context)!.email,
+                  prefixIcon: const Icon(Icons.email),
                 ),
                 keyboardType: TextInputType.emailAddress,
                 validator: (value) {
@@ -104,7 +107,7 @@ class _AuthFormState extends State<AuthForm> {
               TextFormField(
                 controller: _passwordController,
                 decoration: InputDecoration(
-                  labelText: 'Password',
+                  labelText: AppLocalizations.of(context)!.password,
                   prefixIcon: const Icon(Icons.lock),
                   suffixIcon: IconButton(
                     icon: Icon(
@@ -141,7 +144,9 @@ class _AuthFormState extends State<AuthForm> {
                             width: 20,
                             child: CircularProgressIndicator(strokeWidth: 2),
                           )
-                        : Text(widget.isLogin ? 'Login' : 'Register'),
+                        : Text(widget.isLogin
+                            ? AppLocalizations.of(context)!.login
+                            : AppLocalizations.of(context)!.register),
                   );
                 },
               ),

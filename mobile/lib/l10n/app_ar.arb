@@ -1,0 +1,223 @@
+{
+  "@@locale": "ar",
+  "appTitle": "حافظ القرآن",
+  "@appTitle": {
+    "description": "The title of the application"
+  },
+  "welcome": "مرحباً بك في حافظ القرآن",
+  "@welcome": {
+    "description": "Welcome message"
+  },
+  "login": "تسجيل الدخول",
+  "@login": {
+    "description": "Login button text"
+  },
+  "register": "إنشاء حساب",
+  "@register": {
+    "description": "Register button text"
+  },
+  "email": "البريد الإلكتروني",
+  "@email": {
+    "description": "Email field label"
+  },
+  "password": "كلمة المرور",
+  "@password": {
+    "description": "Password field label"
+  },
+  "confirmPassword": "تأكيد كلمة المرور",
+  "@confirmPassword": {
+    "description": "Confirm password field label"
+  },
+  "forgotPassword": "نسيت كلمة المرور؟",
+  "@forgotPassword": {
+    "description": "Forgot password link text"
+  },
+  "dontHaveAccount": "ليس لديك حساب؟",
+  "@dontHaveAccount": {
+    "description": "Text for users who don't have an account"
+  },
+  "alreadyHaveAccount": "لديك حساب بالفعل؟",
+  "@alreadyHaveAccount": {
+    "description": "Text for users who already have an account"
+  },
+  "signUp": "إنشاء حساب",
+  "@signUp": {
+    "description": "Sign up button text"
+  },
+  "signIn": "تسجيل الدخول",
+  "@signIn": {
+    "description": "Sign in button text"
+  },
+  "home": "الرئيسية",
+  "@home": {
+    "description": "Home tab label"
+  },
+  "learning": "التعلم",
+  "@learning": {
+    "description": "Learning tab label"
+  },
+  "progress": "التقدم",
+  "@progress": {
+    "description": "Progress tab label"
+  },
+  "settings": "الإعدادات",
+  "@settings": {
+    "description": "Settings tab label"
+  },
+  "dailyProgress": "التقدم اليومي",
+  "@dailyProgress": {
+    "description": "Daily progress section title"
+  },
+  "streak": "السلسلة",
+  "@streak": {
+    "description": "Streak counter label"
+  },
+  "versesMemorized": "الآيات المحفوظة",
+  "@versesMemorized": {
+    "description": "Verses memorized counter label"
+  },
+  "startLearning": "بدء التعلم",
+  "@startLearning": {
+    "description": "Start learning button text"
+  },
+  "continueLearning": "متابعة التعلم",
+  "@continueLearning": {
+    "description": "Continue learning button text"
+  },
+  "reviewQueue": "قائمة المراجعة",
+  "@reviewQueue": {
+    "description": "Review queue section title"
+  },
+  "quickActions": "الإجراءات السريعة",
+  "@quickActions": {
+    "description": "Quick actions section title"
+  },
+  "recentProgress": "التقدم الأخير",
+  "@recentProgress": {
+    "description": "Recent progress section title"
+  },
+  "selectSurah": "اختر السورة",
+  "@selectSurah": {
+    "description": "Select surah button text"
+  },
+  "selectReciter": "اختر القارئ",
+  "@selectReciter": {
+    "description": "Select reciter button text"
+  },
+  "playAudio": "تشغيل الصوت",
+  "@playAudio": {
+    "description": "Play audio button text"
+  },
+  "recordRecitation": "تسجيل التلاوة",
+  "@recordRecitation": {
+    "description": "Record recitation button text"
+  },
+  "stopRecording": "إيقاف التسجيل",
+  "@stopRecording": {
+    "description": "Stop recording button text"
+  },
+  "submitRecitation": "إرسال التلاوة",
+  "@submitRecitation": {
+    "description": "Submit recitation button text"
+  },
+  "language": "اللغة",
+  "@language": {
+    "description": "Language setting label"
+  },
+  "theme": "المظهر",
+  "@theme": {
+    "description": "Theme setting label"
+  },
+  "notifications": "الإشعارات",
+  "@notifications": {
+    "description": "Notifications setting label"
+  },
+  "logout": "تسجيل الخروج",
+  "@logout": {
+    "description": "Logout button text"
+  },
+  "error": "خطأ",
+  "@error": {
+    "description": "Error message prefix"
+  },
+  "success": "نجح",
+  "@success": {
+    "description": "Success message prefix"
+  },
+  "loading": "جاري التحميل...",
+  "@loading": {
+    "description": "Loading message"
+  },
+  "retry": "إعادة المحاولة",
+  "@retry": {
+    "description": "Retry button text"
+  },
+  "cancel": "إلغاء",
+  "@cancel": {
+    "description": "Cancel button text"
+  },
+  "save": "حفظ",
+  "@save": {
+    "description": "Save button text"
+  },
+  "delete": "حذف",
+  "@delete": {
+    "description": "Delete button text"
+  },
+  "edit": "تعديل",
+  "@edit": {
+    "description": "Edit button text"
+  },
+  "back": "رجوع",
+  "@back": {
+    "description": "Back button text"
+  },
+  "next": "التالي",
+  "@next": {
+    "description": "Next button text"
+  },
+  "previous": "السابق",
+  "@previous": {
+    "description": "Previous button text"
+  },
+  "done": "تم",
+  "@done": {
+    "description": "Done button text"
+  },
+  "skip": "تخطي",
+  "@skip": {
+    "description": "Skip button text"
+  },
+  "share": "مشاركة",
+  "@share": {
+    "description": "Share button text"
+  },
+  "bookmark": "إضافة للمفضلة",
+  "@bookmark": {
+    "description": "Bookmark button text"
+  },
+  "removeBookmark": "إزالة من المفضلة",
+  "@removeBookmark": {
+    "description": "Remove bookmark button text"
+  },
+  "translation": "الترجمة",
+  "@translation": {
+    "description": "Translation toggle text"
+  },
+  "tajweed": "التجويد",
+  "@tajweed": {
+    "description": "Tajweed toggle text"
+  },
+  "audio": "الصوت",
+  "@audio": {
+    "description": "Audio toggle text"
+  },
+  "offlineMode": "وضع عدم الاتصال",
+  "@offlineMode": {
+    "description": "Offline mode indicator"
+  },
+  "onlineMode": "وضع الاتصال",
+  "@onlineMode": {
+    "description": "Online mode indicator"
+  }
+}

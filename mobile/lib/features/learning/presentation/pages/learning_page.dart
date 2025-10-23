@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:quran_memorizer/core/widgets/app_drawer.dart';
+import 'package:quran_memorizer/l10n/app_localizations.dart';
 
 class LearningPage extends StatelessWidget {
   const LearningPage({super.key});
@@ -7,8 +9,9 @@ class LearningPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Learning'),
+        title: Text(AppLocalizations.of(context)!.learning),
       ),
+      drawer: const AppDrawer(),
       body: const Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

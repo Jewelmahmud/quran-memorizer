@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:quran_memorizer/core/widgets/app_drawer.dart';
+import 'package:quran_memorizer/l10n/app_localizations.dart';
 
 class ProgressPage extends StatelessWidget {
   const ProgressPage({super.key});
@@ -7,8 +9,9 @@ class ProgressPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Progress'),
+        title: Text(AppLocalizations.of(context)!.progress),
       ),
+      drawer: const AppDrawer(),
       body: const Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:quran_memorizer/core/widgets/app_drawer.dart';
+import 'package:quran_memorizer/core/widgets/language_selector.dart';
+import 'package:quran_memorizer/l10n/app_localizations.dart';
 
 class SettingsPage extends StatelessWidget {
   const SettingsPage({super.key});
@@ -7,27 +10,17 @@ class SettingsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Settings'),
+        title: Text(AppLocalizations.of(context)!.settings),
       ),
-      body: const Center(
+      drawer: const AppDrawer(),
+      body: const SingleChildScrollView(
+        padding: EdgeInsets.all(16.0),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Icon(
-              Icons.settings,
-              size: 64,
-              color: Colors.grey,
-            ),
-            SizedBox(height: 16),
-            Text(
-              'Settings Page',
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-            ),
-            SizedBox(height: 8),
-            Text(
-              'Reciter selection, notification preferences, and app settings will be here.',
-              textAlign: TextAlign.center,
-            ),
+            LanguageSelector(),
+            SizedBox(height: 24),
+            // Add more settings sections here
           ],
         ),
       ),
