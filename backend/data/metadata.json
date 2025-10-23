@@ -1,0 +1,32 @@
+{
+  "download_info": {
+    "downloaded_at": "2025-10-23 19:30:00",
+    "sources": {
+      "quran_text": "alquran.cloud",
+      "audio": "sample_audio_files",
+      "tarteel": "tarteel.ai (manual download required)"
+    }
+  },
+  "files": {
+    "quran_text": [
+      "quran_text/quran_ar.json",
+      "quran_text/quran_en.json"
+    ],
+    "audio": [],
+    "preprocessing": []
+  },
+  "reciters": [
+    {
+      "reciter_id": "mishary_rashid_alafasy",
+      "name": "Mishary Rashid Alafasy",
+      "country": "Kuwait",
+      "style": "Modern"
+    },
+    {
+      "reciter_id": "abdul_basit_murattal",
+      "name": "Abdul Basit Murattal",
+      "country": "Egypt",
+      "style": "Traditional"
+    }
+  ]
+}

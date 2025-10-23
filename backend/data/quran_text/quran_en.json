@@ -1,0 +1,75 @@
+{
+  "metadata": {
+    "source": "alquran.cloud",
+    "language": "en",
+    "downloaded_at": "2025-10-23 19:30:00"
+  },
+  "surahs": [
+    {
+      "surah_id": 1,
+      "name": "Al-Fatiha",
+      "name_transliterated": "Al-Fatiha",
+      "ayah_count": 7,
+      "verses": [
+        {
+          "ayah_id": 1,
+          "text": "In the name of Allah, the Entirely Merciful, the Especially Merciful.",
+          "transliteration": "Bismillahi ar-Rahman ar-Raheem"
+        },
+        {
+          "ayah_id": 2,
+          "text": "All praise is due to Allah, Lord of the worlds.",
+          "transliteration": "Al-hamdu lillahi rabbil alameen"
+        },
+        {
+          "ayah_id": 3,
+          "text": "The Entirely Merciful, the Especially Merciful.",
+          "transliteration": "Ar-Rahman ar-Raheem"
+        },
+        {
+          "ayah_id": 4,
+          "text": "Sovereign of the Day of Recompense.",
+          "transliteration": "Maliki yawmi ad-deen"
+        },
+        {
+          "ayah_id": 5,
+          "text": "It is You we worship and You we ask for help.",
+          "transliteration": "Iyyaka na'budu wa iyyaka nasta'een"
+        },
+        {
+          "ayah_id": 6,
+          "text": "Guide us to the straight path.",
+          "transliteration": "Ihdina as-sirata al-mustaqeem"
+        },
+        {
+          "ayah_id": 7,
+          "text": "The path of those upon whom You have bestowed favor, not of those who have evoked anger or of those who are astray.",
+          "transliteration": "Sirata alladhina an'amta 'alayhim ghayri al-maghdubi 'alayhim wa la ad-dalleen"
+        }
+      ]
+    },
+    {
+      "surah_id": 2,
+      "name": "Al-Baqarah",
+      "name_transliterated": "Al-Baqarah",
+      "ayah_count": 286,
+      "verses": [
+        {
+          "ayah_id": 1,
+          "text": "Alif, Lam, Meem.",
+          "transliteration": "Alif Lam Meem"
+        },
+        {
+          "ayah_id": 2,
+          "text": "This is the Book about which there is no doubt, a guidance for those conscious of Allah.",
+          "transliteration": "Dhalika al-kitabu la rayba fihi hudan lil-muttaqeen"
+        },
+        {
+          "ayah_id": 3,
+          "text": "Who believe in the unseen, establish prayer, and spend out of what We have provided for them.",
+          "transliteration": "Alladhina yu'minuna bil-ghaybi wa yuqimuna as-salah wa mimma razaqnahum yunfiqun"
+        }
+      ]
+    }
+  ]
+}
