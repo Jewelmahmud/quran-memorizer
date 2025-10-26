@@ -6,8 +6,19 @@ from fastapi import APIRouter, HTTPException, UploadFile, File
 from pydantic import BaseModel
 from typing import List, Optional
 import os
+import time
+import json
+
+from ai.audio_processing.pronunciation_analyzer import PronunciationAnalyzer
+from ai.audio_processing.asr_engine import QuranASREngine
+from database.database import get_db
+from sqlalchemy.orm import Session
 
 router = APIRouter()
+
+# Initialize analyzers
+pronunciation_analyzer = PronunciationAnalyzer()
+asr_engine = QuranASREngine()
 
 class AudioAnalysis(BaseModel):
     session_id: str
@@ -52,10 +63,9 @@ async def analyze_recitation(
     reciter: str = "mishary"
 ):
     """
-    Analyze user's recitation and provide feedback
+    Analyze user's recitation and provide comprehensive feedback
     """
-    # TODO: Implement audio analysis with AI models
-    # For now, return mock analysis
+    start_time = time.time()
     
     # Save uploaded file temporarily
     file_path = f"temp_audio/{file.filename}"
@@ -65,21 +75,71 @@ async def analyze_recitation(
         content = await file.read()
         buffer.write(content)
     
-    # Mock analysis results
-    analysis = AudioAnalysis(
-        session_id="session_123",
-        pronunciation_score=0.85,
-        feedback=[
-            "Good pronunciation overall",
-            "Work on the 'ra' sound in position 3",
-            "Excellent tajweed on madd letters"
-        ],
-        phoneme_errors=["ra_position_3"],
-        tajweed_violations=[]
-    )
+    # Get reference audio path (simplified - would use actual file paths)
+    reference_audio_path = f"backend/data/audio/{reciter}/{surah_id:03d}{ayah_id:03d}.mp3"
     
-    # Clean up temp file
-    os.remove(file_path)
+    # For now, use user's audio as both user and reference (placeholder)
+    # In production, fetch actual reference audio from database
+    expected_text = "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ"  # Example text
+    
+    # Perform comprehensive analysis
+    try:
+        feedback = pronunciation_analyzer.analyze_pronunciation(
+            user_audio_path=file_path,
+            reference_audio_path=file_path,  # Placeholder
+            expected_text=expected_text,
+            surah_id=surah_id,
+            ayah_id=ayah_id
+        )
+        
+        processing_time = time.time() - start_time
+        
+        # Get model info
+        model_info = asr_engine.get_model_info()
+        
+        # Parse violations to extract feedback messages
+        violation_messages = []
+        if feedback.tajweed_violations:
+            for violation in feedback.tajweed_violations:
+                violation_messages.append(violation.get('description', ''))
+        
+        # Parse pronunciation errors
+        error_messages = []
+        if feedback.pronunciation_errors:
+            for error in feedback.pronunciation_errors:
+                if error.get('type') == 'tajweed':
+                    error_messages.append(f"Tajweed: {error.get('description', '')}")
+                elif error.get('type') == 'phoneme':
+                    error_messages.append(f"Phoneme error: {error.get('phoneme', '')}")
+                elif error.get('type') == 'word':
+                    error_messages.append(f"Word error at position {error.get('position', 0)}")
+        
+        # Combine all feedback
+        all_feedback = feedback.suggestions + violation_messages + error_messages
+        
+        analysis = AudioAnalysis(
+            session_id="session_123",
+            pronunciation_score=float(feedback.overall_score * 100),  # Convert to percentage
+            feedback=all_feedback,
+            phoneme_errors=error_messages,
+            tajweed_violations=[v for v in violation_messages]
+        )
+        
+    except Exception as e:
+        print(f"Analysis error: {e}")
+        # Return basic analysis on error
+        analysis = AudioAnalysis(
+            session_id="session_123",
+            pronunciation_score=0.0,
+            feedback=[f"Analysis error: {str(e)}"],
+            phoneme_errors=[],
+            tajweed_violations=[]
+        )
+    
+    finally:
+        # Clean up temp file
+        if os.path.exists(file_path):
+            os.remove(file_path)
     
     return analysis
 

@@ -24,6 +24,17 @@ class Settings:
     AUDIO_PROCESSING_ENABLED: bool = os.getenv("AUDIO_PROCESSING_ENABLED", "True").lower() == "true"
     ON_DEVICE_MODEL_ENABLED: bool = os.getenv("ON_DEVICE_MODEL_ENABLED", "True").lower() == "true"
     
+    # ASR Configuration
+    ASR_MODEL_SIZE: str = os.getenv("ASR_MODEL_SIZE", "base")  # tiny, base, small, medium, large
+    ASR_DEVICE: str = os.getenv("ASR_DEVICE", "auto")  # auto, cpu, cuda, cuda:0
+    ASR_BEAM_SIZE: int = int(os.getenv("ASR_BEAM_SIZE", "5"))
+    ASR_TEMPERATURE: float = float(os.getenv("ASR_TEMPERATURE", "0.0"))
+    USE_ASR_ENGINE: bool = os.getenv("USE_ASR_ENGINE", "True").lower() == "true"
+    
+    # Tajweed Configuration
+    TAJWEED_ENABLED: bool = os.getenv("TAJWEED_ENABLED", "True").lower() == "true"
+    TAJWEED_RIGOROUS_MODE: bool = os.getenv("TAJWEED_RIGOROUS_MODE", "True").lower() == "true"
+    
     # Audio
     AUDIO_STORAGE_PATH: str = os.getenv("AUDIO_STORAGE_PATH", "./data/audio/")
     MAX_AUDIO_FILE_SIZE: int = int(os.getenv("MAX_AUDIO_FILE_SIZE", "10485760"))  # 10MB

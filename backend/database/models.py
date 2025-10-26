@@ -112,10 +112,46 @@ class AudioAnalysis(Base):
     suggestions = Column(Text)  # JSON string
     confidence = Column(Float, default=0.0)
     
+    # Enhanced fields
+    word_alignment = Column(Text)  # JSON string of word-by-word alignment
+    prosody_scores = Column(Text)  # JSON string of prosody metrics
+    model_version = Column(String(50))  # ASR model version used
+    processing_time = Column(Float)  # Time taken in seconds
+    
     created_at = Column(DateTime, default=datetime.utcnow)
     
     # Relationships
     session = relationship("LearningSession")
+    tajweed_violations_details = relationship("TajweedViolation", back_populates="analysis")
+
+
+class TajweedViolation(Base):
+    __tablename__ = "tajweed_violations"
+    
+    id = Column(Integer, primary_key=True, index=True)
+    violation_id = Column(String(100), unique=True, index=True)
+    analysis_id = Column(Integer, ForeignKey("audio_analyses.id"), nullable=False)
+    
+    # Violation details
+    rule_category = Column(String(50), nullable=False)
+    rule_name = Column(String(100), nullable=False)
+    timestamp_start = Column(Float)  # Start time in seconds
+    timestamp_end = Column(Float)  # End time in seconds
+    
+    # Severity and content
+    severity = Column(String(20), nullable=False)  # critical, major, minor
+    expected_pronunciation = Column(Text)
+    actual_pronunciation = Column(Text)
+    audio_segment_path = Column(Text)  # Path to extracted audio segment
+    
+    # Violation metadata
+    description = Column(Text)
+    suggestion = Column(Text)
+    
+    created_at = Column(DateTime, default=datetime.utcnow)
+    
+    # Relationships
+    analysis = relationship("AudioAnalysis", back_populates="tajweed_violations_details")
 
 class Reciter(Base):
     __tablename__ = "reciters"
