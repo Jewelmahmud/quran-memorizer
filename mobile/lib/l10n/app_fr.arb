@@ -116,9 +116,9 @@
   "@stopRecording": {
     "description": "Stop recording button text"
   },
-  "submitRecitation": "Soumettre la récitation",
-  "@submitRecitation": {
-    "description": "Submit recitation button text"
+  "analyzeRecitation": "Analyser la récitation",
+  "@analyzeRecitation": {
+    "description": "Analyze recitation button text"
   },
   "language": "Langue",
   "@language": {

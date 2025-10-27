@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class LocalizationService {
+class LocalizationService extends ChangeNotifier {
   static const String _languageKey = 'selected_language';
 
   static final LocalizationService _instance = LocalizationService._internal();
@@ -62,13 +62,17 @@ class LocalizationService {
       );
       _currentLocale = supportedLocale;
     }
+    notifyListeners();
   }
 
   /// Change the app language
   Future<void> changeLanguage(String languageCode) async {
-    final prefs = await SharedPreferences.getInstance();
-    await prefs.setString(_languageKey, languageCode);
-    _currentLocale = Locale(languageCode);
+    if (_currentLocale.languageCode != languageCode) {
+      final prefs = await SharedPreferences.getInstance();
+      await prefs.setString(_languageKey, languageCode);
+      _currentLocale = Locale(languageCode);
+      notifyListeners();
+    }
   }
 
   /// Get language option by code

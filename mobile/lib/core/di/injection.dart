@@ -7,6 +7,11 @@ import 'package:quran_memorizer/features/auth/domain/repositories/auth_repositor
 import 'package:quran_memorizer/features/auth/domain/usecases/login_usecase.dart';
 import 'package:quran_memorizer/features/auth/domain/usecases/register_usecase.dart';
 import 'package:quran_memorizer/features/auth/presentation/bloc/auth_bloc.dart';
+import 'package:quran_memorizer/features/recite/data/datasources/recite_remote_datasource.dart';
+import 'package:quran_memorizer/features/recite/data/repositories/recite_repository_impl.dart';
+import 'package:quran_memorizer/features/recite/domain/repositories/recite_repository.dart';
+import 'package:quran_memorizer/features/recite/domain/usecases/analyze_recitation_usecase.dart';
+import 'package:quran_memorizer/features/recite/presentation/bloc/recite_bloc.dart';
 
 final getIt = GetIt.instance;
 
@@ -43,6 +48,27 @@ Future<void> init() async {
     () => AuthBloc(
       loginUseCase: getIt(),
       registerUseCase: getIt(),
+    ),
+  );
+
+  // Features - Recite
+  // Data sources
+  getIt.registerLazySingleton<ReciteRemoteDataSource>(
+    () => ReciteRemoteDataSourceImpl(getIt()),
+  );
+
+  // Repository
+  getIt.registerLazySingleton<ReciteRepository>(
+    () => ReciteRepositoryImpl(getIt()),
+  );
+
+  // Use cases
+  getIt.registerLazySingleton(() => AnalyzeRecitationUseCase(getIt()));
+
+  // Bloc
+  getIt.registerFactory(
+    () => ReciteBloc(
+      analyzeRecitationUseCase: getIt(),
     ),
   );
 

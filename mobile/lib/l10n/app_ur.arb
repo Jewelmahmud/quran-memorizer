@@ -116,9 +116,9 @@
   "@stopRecording": {
     "description": "Stop recording button text"
   },
-  "submitRecitation": "تلاوت جمع کریں",
-  "@submitRecitation": {
-    "description": "Submit recitation button text"
+  "analyzeRecitation": "تلاوت کا تجزیہ کریں",
+  "@analyzeRecitation": {
+    "description": "Analyze recitation button text"
   },
   "language": "زبان",
   "@language": {

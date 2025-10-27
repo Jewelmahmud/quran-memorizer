@@ -6,11 +6,13 @@ import 'package:quran_memorizer/features/home/presentation/pages/home_page.dart'
 import 'package:quran_memorizer/features/learning/presentation/pages/learning_page.dart';
 import 'package:quran_memorizer/features/progress/presentation/pages/progress_page.dart';
 import 'package:quran_memorizer/features/settings/presentation/pages/settings_page.dart';
+import 'package:quran_memorizer/features/recite/presentation/pages/recite_page.dart';
 
 class AppRouter {
   static const String login = '/login';
   static const String register = '/register';
   static const String home = '/home';
+  static const String recite = '/recite';
   static const String learning = '/learning';
   static const String progress = '/progress';
   static const String settings = '/settings';
@@ -32,6 +34,10 @@ class AppRouter {
       GoRoute(
         path: home,
         builder: (context, state) => const HomePage(),
+      ),
+      GoRoute(
+        path: recite,
+        builder: (context, state) => const RecitePage(),
       ),
       GoRoute(
         path: learning,

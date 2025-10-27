@@ -116,9 +116,25 @@
   "@stopRecording": {
     "description": "Stop recording button text"
   },
-  "submitRecitation": "إرسال التلاوة",
-  "@submitRecitation": {
-    "description": "Submit recitation button text"
+  "playRecording": "تشغيل التسجيل",
+  "@playRecording": {
+    "description": "Play recording button text"
+  },
+  "paused": "متوقف مؤقتاً",
+  "@paused": {
+    "description": "Paused playback status"
+  },
+  "playing": "جارٍ التشغيل...",
+  "@playing": {
+    "description": "Playing status"
+  },
+  "tapPlayToListen": "اضغط للتشغيل للاستماع",
+  "@tapPlayToListen": {
+    "description": "Instruction to tap play button"
+  },
+  "analyzeRecitation": "تحليل التلاوة",
+  "@analyzeRecitation": {
+    "description": "Analyze recitation button text"
   },
   "language": "اللغة",
   "@language": {
@@ -219,5 +235,149 @@
   "onlineMode": "وضع الاتصال",
   "@onlineMode": {
     "description": "Online mode indicator"
+  },
+  "recite": "التلاوة",
+  "@recite": {
+    "description": "Recite tab label"
+  },
+  "recordingInProgress": "جاري التسجيل...",
+  "@recordingInProgress": {
+    "description": "Recording status message"
+  },
+  "recordingStopped": "تم إيقاف التسجيل",
+  "@recordingStopped": {
+    "description": "Recording stopped message"
+  },
+  "maxRecordingTime": "أقصى وقت تسجيل: دقيقتان",
+  "@maxRecordingTime": {
+    "description": "Max recording time message"
+  },
+  "timeRemaining": "الوقت المتبقي",
+  "@timeRemaining": {
+    "description": "Time remaining label"
+  },
+  "startRecording": "بدء التسجيل",
+  "@startRecording": {
+    "description": "Start recording button text"
+  },
+  "pauseRecording": "إيقاف التسجيل مؤقتاً",
+  "@pauseRecording": {
+    "description": "Pause recording button text"
+  },
+  "resumeRecording": "استئناف التسجيل",
+  "@resumeRecording": {
+    "description": "Resume recording button text"
+  },
+  "analyzingRecitation": "جاري تحليل تلاوتك...",
+  "@analyzingRecitation": {
+    "description": "Analysis in progress message"
+  },
+  "recitationAnalysis": "تحليل التلاوة",
+  "@recitationAnalysis": {
+    "description": "Recitation analysis screen title"
+  },
+  "pronunciationScore": "نقاط النطق",
+  "@pronunciationScore": {
+    "description": "Pronunciation score label"
+  },
+  "feedback": "التعليقات",
+  "@feedback": {
+    "description": "Feedback section title"
+  },
+  "recordAgain": "تسجيل مرة أخرى",
+  "@recordAgain": {
+    "description": "Record again button text"
+  },
+  "submitting": "جاري الإرسال...",
+  "@submitting": {
+    "description": "Submitting status message"
+  },
+  "permissionDenied": "تم رفض الإذن",
+  "@permissionDenied": {
+    "description": "Permission denied error title"
+  },
+  "microphonePermissionRequired": "إذن الميكروفون مطلوب لتسجيل الصوت",
+  "@microphonePermissionRequired": {
+    "description": "Microphone permission error message"
+  },
+  "minutes": "دقائق",
+  "@minutes": {
+    "description": "Minutes unit"
+  },
+  "seconds": "ثواني",
+  "@seconds": {
+    "description": "Seconds unit"
+  },
+  "general": "عام",
+  "@general": {
+    "description": "General settings section"
+  },
+  "audioSettings": "إعدادات الصوت",
+  "@audioSettings": {
+    "description": "Audio settings section"
+  },
+  "learningPreferences": "تفضيلات التعلم",
+  "@learningPreferences": {
+    "description": "Learning preferences section"
+  },
+  "playbackSpeed": "سرعة التشغيل",
+  "@playbackSpeed": {
+    "description": "Audio playback speed setting"
+  },
+  "showTranslation": "عرض الترجمة",
+  "@showTranslation": {
+    "description": "Show translation toggle"
+  },
+  "showTransliteration": "عرض اللفظ اللاتيني",
+  "@showTransliteration": {
+    "description": "Show transliteration toggle"
+  },
+  "enableNotifications": "تفعيل الإشعارات",
+  "@enableNotifications": {
+    "description": "Enable notifications toggle"
+  },
+  "darkMode": "الوضع الليلي",
+  "@darkMode": {
+    "description": "Dark mode toggle"
+  },
+  "about": "حول",
+  "@about": {
+    "description": "About section"
+  },
+  "version": "الإصدار",
+  "@version": {
+    "description": "Version label"
+  },
+  "rateApp": "تقييم التطبيق",
+  "@rateApp": {
+    "description": "Rate app button"
+  },
+  "shareApp": "مشاركة التطبيق",
+  "@shareApp": {
+    "description": "Share app button"
+  },
+  "help": "المساعدة والدعم",
+  "@help": {
+    "description": "Help section"
+  },
+  "feedback": "التعليقات",
+  "@feedback": {
+    "description": "Feedback section title"
+  },
+  "themeMode": "وضع المظهر",
+  "@themeMode": {
+    "description": "Theme mode setting label"
+  },
+  "system": "النظام",
+  "@system": {
+    "description": "System theme mode"
+  },
+  "light": "فاتح",
+  "@light": {
+    "description": "Light theme mode"
+  },
+  "dark": "داكن",
+  "@dark": {
+    "description": "Dark theme mode"
   }
 }

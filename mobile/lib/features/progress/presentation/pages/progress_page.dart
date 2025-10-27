@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quran_memorizer/core/widgets/app_drawer.dart';
+import 'package:quran_memorizer/core/widgets/bottom_navigation_bar.dart';
 import 'package:quran_memorizer/l10n/app_localizations.dart';
 
 class ProgressPage extends StatelessWidget {
@@ -34,6 +35,7 @@ class ProgressPage extends StatelessWidget {
           ],
         ),
       ),
+      bottomNavigationBar: const AppBottomNavigationBar(currentIndex: 3),
     );
   }
 }

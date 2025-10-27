@@ -96,7 +96,19 @@ class AppLocalizationsEn extends AppLocalizations {
   String get stopRecording => 'Stop Recording';
 
   @override
-  String get submitRecitation => 'Submit Recitation';
+  String get playRecording => 'Play Recording';
+
+  @override
+  String get paused => 'Paused';
+
+  @override
+  String get playing => 'Playing...';
+
+  @override
+  String get tapPlayToListen => 'Tap play to listen';
+
+  @override
+  String get analyzeRecitation => 'Analyze Recitation';
 
   @override
   String get language => 'Language';
@@ -172,4 +184,109 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get onlineMode => 'Online Mode';
+
+  @override
+  String get recite => 'Recite';
+
+  @override
+  String get recordingInProgress => 'Recording in progress...';
+
+  @override
+  String get recordingStopped => 'Recording stopped';
+
+  @override
+  String get maxRecordingTime => 'Max recording time: 2 minutes';
+
+  @override
+  String get timeRemaining => 'Time remaining';
+
+  @override
+  String get startRecording => 'Start Recording';
+
+  @override
+  String get pauseRecording => 'Pause Recording';
+
+  @override
+  String get resumeRecording => 'Resume Recording';
+
+  @override
+  String get analyzingRecitation => 'Analyzing your recitation...';
+
+  @override
+  String get recitationAnalysis => 'Recitation Analysis';
+
+  @override
+  String get pronunciationScore => 'Pronunciation Score';
+
+  @override
+  String get feedback => 'Feedback';
+
+  @override
+  String get recordAgain => 'Record Again';
+
+  @override
+  String get submitting => 'Submitting...';
+
+  @override
+  String get permissionDenied => 'Permission Denied';
+
+  @override
+  String get microphonePermissionRequired => 'Microphone permission is required to record audio';
+
+  @override
+  String get minutes => 'minutes';
+
+  @override
+  String get seconds => 'seconds';
+
+  @override
+  String get general => 'General';
+
+  @override
+  String get audioSettings => 'Audio Settings';
+
+  @override
+  String get learningPreferences => 'Learning Preferences';
+
+  @override
+  String get playbackSpeed => 'Playback Speed';
+
+  @override
+  String get showTranslation => 'Show Translation';
+
+  @override
+  String get showTransliteration => 'Show Transliteration';
+
+  @override
+  String get enableNotifications => 'Enable Notifications';
+
+  @override
+  String get darkMode => 'Dark Mode';
+
+  @override
+  String get about => 'About';
+
+  @override
+  String get version => 'Version';
+
+  @override
+  String get rateApp => 'Rate App';
+
+  @override
+  String get shareApp => 'Share App';
+
+  @override
+  String get help => 'Help & Support';
+
+  @override
+  String get themeMode => 'Theme Mode';
+
+  @override
+  String get system => 'System';
+
+  @override
+  String get light => 'Light';
+
+  @override
+  String get dark => 'Dark';
 }

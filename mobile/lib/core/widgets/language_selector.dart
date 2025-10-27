@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:quran_memorizer/core/localization/localization_service.dart';
 import 'package:quran_memorizer/l10n/app_localizations.dart';
+import 'package:quran_memorizer/app/app.dart';
 
 class LanguageSelector extends StatelessWidget {
   final VoidCallback? onLanguageChanged;
@@ -48,13 +49,11 @@ class LanguageSelector extends StatelessWidget {
                 onTap: () async {
                   if (!isSelected) {
                     await localizationService.changeLanguage(language.code);
+                    // Notify LocaleNotifier to trigger rebuild
+                    LocaleNotifier().value = localizationService.currentLocale;
                     if (onLanguageChanged != null) {
                       onLanguageChanged!();
                     }
-                    // Restart the app to apply the new language
-                    // This is a simple approach; in production, you might want to use
-                    // a more sophisticated state management approach
-                    Navigator.of(context).pushReplacementNamed('/');
                   }
                 },
               );
@@ -94,9 +93,9 @@ class LanguageSelectorDialog extends StatelessWidget {
               onChanged: (value) async {
                 if (value != null && value != currentLocale.languageCode) {
                   await localizationService.changeLanguage(value);
+                  // Notify LocaleNotifier to trigger rebuild
+                  LocaleNotifier().value = localizationService.currentLocale;
                   Navigator.of(context).pop();
-                  // Restart the app to apply the new language
-                  Navigator.of(context).pushReplacementNamed('/');
                 }
               },
             );

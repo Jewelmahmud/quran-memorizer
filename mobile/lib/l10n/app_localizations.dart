@@ -273,11 +273,35 @@ abstract class AppLocalizations {
   /// **'Stop Recording'**
   String get stopRecording;
 
-  /// Submit recitation button text
+  /// Play recording button text
   ///
   /// In en, this message translates to:
-  /// **'Submit Recitation'**
-  String get submitRecitation;
+  /// **'Play Recording'**
+  String get playRecording;
+
+  /// Paused playback status
+  ///
+  /// In en, this message translates to:
+  /// **'Paused'**
+  String get paused;
+
+  /// Playing status
+  ///
+  /// In en, this message translates to:
+  /// **'Playing...'**
+  String get playing;
+
+  /// Instruction to tap play button
+  ///
+  /// In en, this message translates to:
+  /// **'Tap play to listen'**
+  String get tapPlayToListen;
+
+  /// Analyze recitation button text
+  ///
+  /// In en, this message translates to:
+  /// **'Analyze Recitation'**
+  String get analyzeRecitation;
 
   /// Language setting label
   ///
@@ -428,6 +452,216 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Online Mode'**
   String get onlineMode;
+
+  /// Recite tab label
+  ///
+  /// In en, this message translates to:
+  /// **'Recite'**
+  String get recite;
+
+  /// Recording status message
+  ///
+  /// In en, this message translates to:
+  /// **'Recording in progress...'**
+  String get recordingInProgress;
+
+  /// Recording stopped message
+  ///
+  /// In en, this message translates to:
+  /// **'Recording stopped'**
+  String get recordingStopped;
+
+  /// Max recording time message
+  ///
+  /// In en, this message translates to:
+  /// **'Max recording time: 2 minutes'**
+  String get maxRecordingTime;
+
+  /// Time remaining label
+  ///
+  /// In en, this message translates to:
+  /// **'Time remaining'**
+  String get timeRemaining;
+
+  /// Start recording button text
+  ///
+  /// In en, this message translates to:
+  /// **'Start Recording'**
+  String get startRecording;
+
+  /// Pause recording button text
+  ///
+  /// In en, this message translates to:
+  /// **'Pause Recording'**
+  String get pauseRecording;
+
+  /// Resume recording button text
+  ///
+  /// In en, this message translates to:
+  /// **'Resume Recording'**
+  String get resumeRecording;
+
+  /// Analysis in progress message
+  ///
+  /// In en, this message translates to:
+  /// **'Analyzing your recitation...'**
+  String get analyzingRecitation;
+
+  /// Recitation analysis screen title
+  ///
+  /// In en, this message translates to:
+  /// **'Recitation Analysis'**
+  String get recitationAnalysis;
+
+  /// Pronunciation score label
+  ///
+  /// In en, this message translates to:
+  /// **'Pronunciation Score'**
+  String get pronunciationScore;
+
+  /// Feedback section title
+  ///
+  /// In en, this message translates to:
+  /// **'Feedback'**
+  String get feedback;
+
+  /// Record again button text
+  ///
+  /// In en, this message translates to:
+  /// **'Record Again'**
+  String get recordAgain;
+
+  /// Submitting status message
+  ///
+  /// In en, this message translates to:
+  /// **'Submitting...'**
+  String get submitting;
+
+  /// Permission denied error title
+  ///
+  /// In en, this message translates to:
+  /// **'Permission Denied'**
+  String get permissionDenied;
+
+  /// Microphone permission error message
+  ///
+  /// In en, this message translates to:
+  /// **'Microphone permission is required to record audio'**
+  String get microphonePermissionRequired;
+
+  /// Minutes unit
+  ///
+  /// In en, this message translates to:
+  /// **'minutes'**
+  String get minutes;
+
+  /// Seconds unit
+  ///
+  /// In en, this message translates to:
+  /// **'seconds'**
+  String get seconds;
+
+  /// General settings section
+  ///
+  /// In en, this message translates to:
+  /// **'General'**
+  String get general;
+
+  /// Audio settings section
+  ///
+  /// In en, this message translates to:
+  /// **'Audio Settings'**
+  String get audioSettings;
+
+  /// Learning preferences section
+  ///
+  /// In en, this message translates to:
+  /// **'Learning Preferences'**
+  String get learningPreferences;
+
+  /// Audio playback speed setting
+  ///
+  /// In en, this message translates to:
+  /// **'Playback Speed'**
+  String get playbackSpeed;
+
+  /// Show translation toggle
+  ///
+  /// In en, this message translates to:
+  /// **'Show Translation'**
+  String get showTranslation;
+
+  /// Show transliteration toggle
+  ///
+  /// In en, this message translates to:
+  /// **'Show Transliteration'**
+  String get showTransliteration;
+
+  /// Enable notifications toggle
+  ///
+  /// In en, this message translates to:
+  /// **'Enable Notifications'**
+  String get enableNotifications;
+
+  /// Dark mode toggle
+  ///
+  /// In en, this message translates to:
+  /// **'Dark Mode'**
+  String get darkMode;
+
+  /// About section
+  ///
+  /// In en, this message translates to:
+  /// **'About'**
+  String get about;
+
+  /// Version label
+  ///
+  /// In en, this message translates to:
+  /// **'Version'**
+  String get version;
+
+  /// Rate app button
+  ///
+  /// In en, this message translates to:
+  /// **'Rate App'**
+  String get rateApp;
+
+  /// Share app button
+  ///
+  /// In en, this message translates to:
+  /// **'Share App'**
+  String get shareApp;
+
+  /// Help section
+  ///
+  /// In en, this message translates to:
+  /// **'Help & Support'**
+  String get help;
+
+  /// Theme mode setting label
+  ///
+  /// In en, this message translates to:
+  /// **'Theme Mode'**
+  String get themeMode;
+
+  /// System theme mode
+  ///
+  /// In en, this message translates to:
+  /// **'System'**
+  String get system;
+
+  /// Light theme mode
+  ///
+  /// In en, this message translates to:
+  /// **'Light'**
+  String get light;
+
+  /// Dark theme mode
+  ///
+  /// In en, this message translates to:
+  /// **'Dark'**
+  String get dark;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

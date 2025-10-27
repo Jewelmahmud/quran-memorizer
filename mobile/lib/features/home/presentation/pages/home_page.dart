@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:quran_memorizer/core/widgets/app_drawer.dart';
+import 'package:quran_memorizer/core/widgets/bottom_navigation_bar.dart';
 import 'package:quran_memorizer/features/home/presentation/widgets/dashboard_widget.dart';
 import 'package:quran_memorizer/features/home/presentation/widgets/quick_actions_widget.dart';
 import 'package:quran_memorizer/features/home/presentation/widgets/recent_progress_widget.dart';
@@ -38,6 +39,7 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
+      bottomNavigationBar: const AppBottomNavigationBar(currentIndex: 0),
     );
   }
 }

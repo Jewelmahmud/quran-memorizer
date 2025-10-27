@@ -116,9 +116,25 @@
   "@stopRecording": {
     "description": "Stop recording button text"
   },
-  "submitRecitation": "Submit Recitation",
-  "@submitRecitation": {
-    "description": "Submit recitation button text"
+  "playRecording": "Play Recording",
+  "@playRecording": {
+    "description": "Play recording button text"
+  },
+  "paused": "Paused",
+  "@paused": {
+    "description": "Paused playback status"
+  },
+  "playing": "Playing...",
+  "@playing": {
+    "description": "Playing status"
+  },
+  "tapPlayToListen": "Tap play to listen",
+  "@tapPlayToListen": {
+    "description": "Instruction to tap play button"
+  },
+  "analyzeRecitation": "Analyze Recitation",
+  "@analyzeRecitation": {
+    "description": "Analyze recitation button text"
   },
   "language": "Language",
   "@language": {
@@ -219,5 +235,149 @@
   "onlineMode": "Online Mode",
   "@onlineMode": {
     "description": "Online mode indicator"
+  },
+  "recite": "Recite",
+  "@recite": {
+    "description": "Recite tab label"
+  },
+  "recordingInProgress": "Recording in progress...",
+  "@recordingInProgress": {
+    "description": "Recording status message"
+  },
+  "recordingStopped": "Recording stopped",
+  "@recordingStopped": {
+    "description": "Recording stopped message"
+  },
+  "maxRecordingTime": "Max recording time: 2 minutes",
+  "@maxRecordingTime": {
+    "description": "Max recording time message"
+  },
+  "timeRemaining": "Time remaining",
+  "@timeRemaining": {
+    "description": "Time remaining label"
+  },
+  "startRecording": "Start Recording",
+  "@startRecording": {
+    "description": "Start recording button text"
+  },
+  "pauseRecording": "Pause Recording",
+  "@pauseRecording": {
+    "description": "Pause recording button text"
+  },
+  "resumeRecording": "Resume Recording",
+  "@resumeRecording": {
+    "description": "Resume recording button text"
+  },
+  "analyzingRecitation": "Analyzing your recitation...",
+  "@analyzingRecitation": {
+    "description": "Analysis in progress message"
+  },
+  "recitationAnalysis": "Recitation Analysis",
+  "@recitationAnalysis": {
+    "description": "Recitation analysis screen title"
+  },
+  "pronunciationScore": "Pronunciation Score",
+  "@pronunciationScore": {
+    "description": "Pronunciation score label"
+  },
+  "feedback": "Feedback",
+  "@feedback": {
+    "description": "Feedback section title"
+  },
+  "recordAgain": "Record Again",
+  "@recordAgain": {
+    "description": "Record again button text"
+  },
+  "submitting": "Submitting...",
+  "@submitting": {
+    "description": "Submitting status message"
+  },
+  "permissionDenied": "Permission Denied",
+  "@permissionDenied": {
+    "description": "Permission denied error title"
+  },
+  "microphonePermissionRequired": "Microphone permission is required to record audio",
+  "@microphonePermissionRequired": {
+    "description": "Microphone permission error message"
+  },
+  "minutes": "minutes",
+  "@minutes": {
+    "description": "Minutes unit"
+  },
+  "seconds": "seconds",
+  "@seconds": {
+    "description": "Seconds unit"
+  },
+  "general": "General",
+  "@general": {
+    "description": "General settings section"
+  },
+  "audioSettings": "Audio Settings",
+  "@audioSettings": {
+    "description": "Audio settings section"
+  },
+  "learningPreferences": "Learning Preferences",
+  "@learningPreferences": {
+    "description": "Learning preferences section"
+  },
+  "playbackSpeed": "Playback Speed",
+  "@playbackSpeed": {
+    "description": "Audio playback speed setting"
+  },
+  "showTranslation": "Show Translation",
+  "@showTranslation": {
+    "description": "Show translation toggle"
+  },
+  "showTransliteration": "Show Transliteration",
+  "@showTransliteration": {
+    "description": "Show transliteration toggle"
+  },
+  "enableNotifications": "Enable Notifications",
+  "@enableNotifications": {
+    "description": "Enable notifications toggle"
+  },
+  "darkMode": "Dark Mode",
+  "@darkMode": {
+    "description": "Dark mode toggle"
+  },
+  "about": "About",
+  "@about": {
+    "description": "About section"
+  },
+  "version": "Version",
+  "@version": {
+    "description": "Version label"
+  },
+  "rateApp": "Rate App",
+  "@rateApp": {
+    "description": "Rate app button"
+  },
+  "shareApp": "Share App",
+  "@shareApp": {
+    "description": "Share app button"
+  },
+  "help": "Help & Support",
+  "@help": {
+    "description": "Help section"
+  },
+  "feedback": "Feedback",
+  "@feedback": {
+    "description": "Feedback section title"
+  },
+  "themeMode": "Theme Mode",
+  "@themeMode": {
+    "description": "Theme mode setting label"
+  },
+  "system": "System",
+  "@system": {
+    "description": "System theme mode"
+  },
+  "light": "Light",
+  "@light": {
+    "description": "Light theme mode"
+  },
+  "dark": "Dark",
+  "@dark": {
+    "description": "Dark theme mode"
   }
 }
