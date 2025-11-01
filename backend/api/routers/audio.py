@@ -9,16 +9,23 @@ import os
 import time
 import json
 
-from ai.audio_processing.pronunciation_analyzer import PronunciationAnalyzer
-from ai.audio_processing.asr_engine import QuranASREngine
 from database.database import get_db
 from sqlalchemy.orm import Session
 
 router = APIRouter()
 
-# Initialize analyzers
-pronunciation_analyzer = PronunciationAnalyzer()
-asr_engine = QuranASREngine()
+# Initialize analyzers (optional - only if AI dependencies are available)
+try:
+    from ai.audio_processing.pronunciation_analyzer import PronunciationAnalyzer
+    from ai.audio_processing.asr_engine import QuranASREngine
+    pronunciation_analyzer = PronunciationAnalyzer()
+    asr_engine = QuranASREngine()
+    AI_ENABLED = True
+except ImportError:
+    print("Warning: AI audio processing dependencies not available. Audio analysis will be disabled.")
+    pronunciation_analyzer = None
+    asr_engine = None
+    AI_ENABLED = False
 
 class AudioAnalysis(BaseModel):
     session_id: str
@@ -84,47 +91,57 @@ async def analyze_recitation(
     
     # Perform comprehensive analysis
     try:
-        feedback = pronunciation_analyzer.analyze_pronunciation(
-            user_audio_path=file_path,
-            reference_audio_path=file_path,  # Placeholder
-            expected_text=expected_text,
-            surah_id=surah_id,
-            ayah_id=ayah_id
-        )
-        
-        processing_time = time.time() - start_time
-        
-        # Get model info
-        model_info = asr_engine.get_model_info()
-        
-        # Parse violations to extract feedback messages
-        violation_messages = []
-        if feedback.tajweed_violations:
-            for violation in feedback.tajweed_violations:
-                violation_messages.append(violation.get('description', ''))
-        
-        # Parse pronunciation errors
-        error_messages = []
-        if feedback.pronunciation_errors:
-            for error in feedback.pronunciation_errors:
-                if error.get('type') == 'tajweed':
-                    error_messages.append(f"Tajweed: {error.get('description', '')}")
-                elif error.get('type') == 'phoneme':
-                    error_messages.append(f"Phoneme error: {error.get('phoneme', '')}")
-                elif error.get('type') == 'word':
-                    error_messages.append(f"Word error at position {error.get('position', 0)}")
-        
-        # Combine all feedback
-        all_feedback = feedback.suggestions + violation_messages + error_messages
-        
-        analysis = AudioAnalysis(
-            session_id="session_123",
-            pronunciation_score=float(feedback.overall_score * 100),  # Convert to percentage
-            feedback=all_feedback,
-            phoneme_errors=error_messages,
-            tajweed_violations=[v for v in violation_messages]
-        )
-        
+        if not AI_ENABLED:
+            # Return placeholder analysis when AI is disabled
+            analysis = AudioAnalysis(
+                session_id="session_123",
+                pronunciation_score=0.0,
+                feedback=["AI audio processing is currently disabled. Install torch and related dependencies to enable analysis."],
+                phoneme_errors=[],
+                tajweed_violations=[]
+            )
+        else:
+            feedback = pronunciation_analyzer.analyze_pronunciation(
+                user_audio_path=file_path,
+                reference_audio_path=file_path,  # Placeholder
+                expected_text=expected_text,
+                surah_id=surah_id,
+                ayah_id=ayah_id
+            )
+            
+            processing_time = time.time() - start_time
+            
+            # Get model info
+            model_info = asr_engine.get_model_info()
+            
+            # Parse violations to extract feedback messages
+            violation_messages = []
+            if feedback.tajweed_violations:
+                for violation in feedback.tajweed_violations:
+                    violation_messages.append(violation.get('description', ''))
+            
+            # Parse pronunciation errors
+            error_messages = []
+            if feedback.pronunciation_errors:
+                for error in feedback.pronunciation_errors:
+                    if error.get('type') == 'tajweed':
+                        error_messages.append(f"Tajweed: {error.get('description', '')}")
+                    elif error.get('type') == 'phoneme':
+                        error_messages.append(f"Phoneme error: {error.get('phoneme', '')}")
+                    elif error.get('type') == 'word':
+                        error_messages.append(f"Word error at position {error.get('position', 0)}")
+            
+            # Combine all feedback
+            all_feedback = feedback.suggestions + violation_messages + error_messages
+            
+            analysis = AudioAnalysis(
+                session_id="session_123",
+                pronunciation_score=float(feedback.overall_score * 100),  # Convert to percentage
+                feedback=all_feedback,
+                phoneme_errors=error_messages,
+                tajweed_violations=[v for v in violation_messages]
+            )
+            
     except Exception as e:
         print(f"Analysis error: {e}")
         # Return basic analysis on error

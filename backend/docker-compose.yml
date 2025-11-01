@@ -1,0 +1,62 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: quran_memorizer_backend
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=sqlite:///./quran_memorizer.db
+      - SECRET_KEY=your-secret-key-change-in-production
+      - DEBUG=True
+      - API_HOST=0.0.0.0
+      - API_PORT=8000
+      # AI Configuration
+      - AUDIO_PROCESSING_ENABLED=True
+      - ON_DEVICE_MODEL_ENABLED=True
+      - TAJWEED_ENABLED=True
+      # ASR Configuration
+      - ASR_MODEL_SIZE=base
+      - USE_ASR_ENGINE=True
+      # Paths
+      - AUDIO_STORAGE_PATH=/app/data/audio
+      - MODEL_PATH=/app/ai/models
+    volumes:
+      # Mount data directories for persistence
+      - ./data:/app/data
+      - ./ai/models:/app/ai/models
+      # Mount backend data if exists
+      - ./backend/data:/app/backend/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Optional: PostgreSQL database service
+  # Uncomment if you want to use PostgreSQL instead of SQLite
+  # postgres:
+  #   image: postgres:15-alpine
+  #   container_name: quran_memorizer_db
+  #   environment:
+  #     - POSTGRES_USER=quran_user
+  #     - POSTGRES_PASSWORD=quran_password
+  #     - POSTGRES_DB=quran_memorizer
+  #   volumes:
+  #     - postgres_data:/var/lib/postgresql/data
+  #   ports:
+  #     - "5432:5432"
+  #   restart: unless-stopped
+  #   healthcheck:
+  #     test: ["CMD-SHELL", "pg_isready -U quran_user"]
+  #     interval: 10s
+  #     timeout: 5s
+  #     retries: 5
+
+# volumes:
+#   postgres_data:

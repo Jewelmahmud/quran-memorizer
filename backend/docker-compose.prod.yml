@@ -1,0 +1,92 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      # Uncomment to use a specific Dockerfile for production
+      # dockerfile: Dockerfile.prod
+    container_name: quran_memorizer_backend_prod
+    ports:
+      - "8000:8000"
+    environment:
+      # Database - Use PostgreSQL for production
+      - DATABASE_URL=${DATABASE_URL:-postgresql://quran_user:quran_password@postgres:5432/quran_memorizer}
+      - SECRET_KEY=${SECRET_KEY}
+      - ALGORITHM=HS256
+      - ACCESS_TOKEN_EXPIRE_MINUTES=30
+      - DEBUG=False
+      # API
+      - API_HOST=0.0.0.0
+      - API_PORT=8000
+      # AI Configuration
+      - AUDIO_PROCESSING_ENABLED=True
+      - ON_DEVICE_MODEL_ENABLED=True
+      - TAJWEED_ENABLED=True
+      # ASR Configuration
+      - ASR_MODEL_SIZE=${ASR_MODEL_SIZE:-base}
+      - ASR_DEVICE=cpu
+      - ASR_BEAM_SIZE=5
+      - ASR_TEMPERATURE=0.0
+      - USE_ASR_ENGINE=True
+      # Tajweed Configuration
+      - TAJWEED_RIGOROUS_MODE=True
+      # Paths
+      - AUDIO_STORAGE_PATH=/app/data/audio
+      - MODEL_PATH=/app/ai/models
+      # Rate Limiting
+      - RATE_LIMIT_PER_MINUTE=60
+      - RATE_LIMIT_BURST=10
+    volumes:
+      # Use named volumes for production data persistence
+      - audio_data:/app/data/audio
+      - models_data:/app/ai/models
+      - quran_text_data:/app/data/quran_text
+    restart: always
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    # Resource limits
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 4G
+        reservations:
+          cpus: '1'
+          memory: 2G
+
+  postgres:
+    image: postgres:15-alpine
+    container_name: quran_memorizer_db_prod
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER:-quran_user}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-quran_password}
+      - POSTGRES_DB=${POSTGRES_DB:-quran_memorizer}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: always
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-quran_user}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    # Resource limits
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 1G
+        reservations:
+          cpus: '0.5'
+          memory: 512M
+
+volumes:
+  postgres_data:
+  audio_data:
+  models_data:
+  quran_text_data:

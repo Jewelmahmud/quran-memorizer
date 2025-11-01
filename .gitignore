@@ -125,3 +125,7 @@ jspm_packages/
 
 # Yarn Integrity file
 .yarn-integrity
+
+# Docker
+docker-compose.override.yml
+*.dockerfile.local

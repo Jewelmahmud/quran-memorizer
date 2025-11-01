@@ -50,11 +50,33 @@ quranmomorizer/
 ## Getting Started
 
 ### Prerequisites
-- Python 3.8+
-- Flutter 3.0+
+- Docker and Docker Compose (recommended for backend)
+- Python 3.8+ (for manual backend setup)
+- Flutter 3.0+ (for mobile app)
 - Node.js (for some development tools)
 
 ### Backend Setup
+
+#### Using Docker (Recommended)
+
+1. **Build and run with Docker Compose**:
+   ```bash
+   cd backend
+   docker-compose up -d
+   ```
+
+2. **Or use the Makefile**:
+   ```bash
+   cd backend
+   make build
+   make up
+   ```
+
+The API will be available at `http://localhost:8000`
+
+See [backend/DOCKER_SETUP.md](backend/DOCKER_SETUP.md) for detailed Docker documentation.
+
+#### Manual Setup
 
 1. **Install Python dependencies**:
    ```bash
@@ -166,10 +188,29 @@ flutter test
 ## Deployment
 
 ### Backend Deployment
+
+#### Docker Deployment (Recommended)
+
+**Development**:
+```bash
+cd backend
+docker-compose up -d
+```
+
+**Production**:
+```bash
+cd backend
+docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
+```
+
+#### Cloud Deployment
 - **Production**: Docker container on AWS/GCP
 - **Database**: PostgreSQL on RDS/Cloud SQL
 - **Storage**: S3/Cloud Storage for audio files
 - **CDN**: CloudFront for global audio delivery
+- **Container Orchestration**: Docker Swarm or Kubernetes
+
+See [backend/DOCKER_SETUP.md](backend/DOCKER_SETUP.md) for complete deployment guide.
 
 ### Mobile Deployment
 - **iOS**: App Store via Xcode
