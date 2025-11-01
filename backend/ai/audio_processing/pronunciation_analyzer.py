@@ -4,7 +4,6 @@ Enhanced Pronunciation Analyzer with ASR and Tajweed Engine Integration
 
 import librosa
 import numpy as np
-from dtaidistance import dtw
 from typing import List, Dict, Tuple, Optional
 import soundfile as sf
 from dataclasses import dataclass
@@ -124,6 +123,7 @@ class PronunciationAnalyzer:
     def calculate_dtw_distance(self, features1: np.ndarray, features2: np.ndarray) -> float:
         """
         Calculate Dynamic Time Warping distance between two feature sequences
+        Pure NumPy implementation for cross-platform compatibility
         
         Args:
             features1: First feature sequence
@@ -132,9 +132,31 @@ class PronunciationAnalyzer:
         Returns:
             Normalized DTW distance (0.0 = identical, higher = more different)
         """
-        distance = dtw.distance(features1, features2)
-        max_len = max(len(features1), len(features2))
-        normalized_distance = distance / max_len
+        # Get dimensions
+        n, m = len(features1), len(features2)
+        
+        # Initialize cost matrix
+        cost_matrix = np.full((n + 1, m + 1), np.inf)
+        cost_matrix[0, 0] = 0
+        
+        # Calculate local distance matrix (euclidean distance)
+        for i in range(1, n + 1):
+            for j in range(1, m + 1):
+                # Compute euclidean distance between feature vectors
+                local_distance = np.linalg.norm(features1[i-1] - features2[j-1])
+                # DTW recurrence relation
+                cost_matrix[i, j] = local_distance + min(
+                    cost_matrix[i-1, j],      # insertion
+                    cost_matrix[i, j-1],      # deletion
+                    cost_matrix[i-1, j-1]     # match
+                )
+        
+        # Get the final DTW distance
+        distance = cost_matrix[n, m]
+        
+        # Normalize by the maximum sequence length
+        max_len = max(n, m)
+        normalized_distance = distance / max_len if max_len > 0 else 0.0
         
         return normalized_distance
     
